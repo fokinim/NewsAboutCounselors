@@ -4,6 +4,7 @@ public class Basket {
     private String items = "";
     private int totalPrice = 0;
     private int limit;
+    private  double totalWeight;
 
     public Basket() {
         increaseCount(1);
@@ -33,7 +34,10 @@ public class Basket {
     public void add(String name, int price) {
         add(name, price, 1);
     }
-
+    public void add(String name, int price, int count, double weight) {
+        totalWeight = totalWeight + weight;
+        add(name, price, count);
+    }
     public void add(String name, int price, int count) {
         boolean error = false;
         if (contains(name)) {
@@ -66,7 +70,9 @@ public class Basket {
     public boolean contains(String name) {
         return items.contains(name);
     }
-
+    public double getTotalWeight() {
+        return  totalWeight;
+    }
     public void print(String title) {
         System.out.println(title);
         if (items.isEmpty()) {
