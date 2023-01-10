@@ -1,4 +1,6 @@
-public class CargoInfo {
+import java.util.Scanner;
+
+public class Cargo {
 
     private Dimensions dimensions;
     private final int weight;
@@ -7,8 +9,8 @@ public class CargoInfo {
     private final String regNumber;
     private final boolean fragile;
 
-    public CargoInfo(Dimensions dimensions, int weight, String deliveryAddress,
-                     boolean flipOk, String regNumber, boolean fragile) {
+    public Cargo(Dimensions dimensions, int weight, String deliveryAddress,
+                 boolean flipOk, String regNumber, boolean fragile) {
         this.dimensions = dimensions;
         this.weight = weight;
         this.deliveryAddress = deliveryAddress;
@@ -16,9 +18,18 @@ public class CargoInfo {
         this.regNumber = regNumber;
         this.fragile = fragile;
     }
+    public Cargo setDimensions(Dimensions dimensions) {
+        return new Cargo(dimensions, weight, deliveryAddress,
+                flipOk, regNumber, fragile);
+    }
 
-    public CargoInfo setCargoinfo() {
-        return new CargoInfo(dimensions.setDimensions(), 480, "Нью-йорк",
+    public Cargo setWeight(int weight) {
+        return new Cargo(dimensions,  weight, deliveryAddress,
+                flipOk, regNumber, fragile);
+    }
+
+    public Cargo setDeliveryAddress(String deliveryAddress) {
+        return new Cargo(dimensions,  weight, deliveryAddress,
                 flipOk, regNumber, fragile);
     }
 

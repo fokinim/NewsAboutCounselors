@@ -2,12 +2,13 @@ public class Dimensions {
     private final int width;
     private final int height;
     private final int length;
-    private int cargoVolume;
+    private final int cargoVolume;
 
     public Dimensions(int width, int height, int length) {
         this.width = width;
         this.height = height;
         this.length = length;
+        this.cargoVolume = width * height * length;
     }
     public int getWidth() {
         return width;
@@ -21,13 +22,15 @@ public class Dimensions {
         return length;
     }
     public int cargoVolume() {
-        cargoVolume = width * height * length;
         return cargoVolume;
     }
-
-    public Dimensions setDimensions() {
-        return new Dimensions(450,250,140);
+    public Dimensions setWidth(int width) {
+        return new Dimensions(width, height, length);
     }
-
-
+    public Dimensions setHeight(int height) {
+        return new Dimensions(width, height, length);
+    }
+    public Dimensions setLength(int length) {
+        return new Dimensions(width, height, length);
+    }
 }
