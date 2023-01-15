@@ -8,7 +8,12 @@ public class HardDrive {
         this.hardDriveWeight = hardDriveWeight;
         this.hardDriveType = hardDriveType;
     }
-    public String hardDrivetoString() {
+
+    public int getHardDriveWeight() {
+        return hardDriveWeight;
+    }
+
+    public String toString() {
         return "Объем жесткого диска: " + hardDriveVolume + "\n" +
                 "Тип жесткого диска: " + hardDriveType + "\n" +
                 "Масса жесткого диска: " + hardDriveWeight;

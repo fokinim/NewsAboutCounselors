@@ -9,20 +9,20 @@ public class Main {
 
         Computer computer1 = new Computer("ASUS", "Dream", defaultProcessor, defaulRam,
                 defaultHardDrive, defaultDisplay, defaultKeyboard);
-        computer1.setProcessor(5000,4,ProcessorManufacturer.APPLE,250);
-        computer1.setRam(1024,RamType.DDR2,100);
-        computer1.setHardDrive(512,650,HardDriveType.SSD);
-        computer1.setDisplay(42,1050,DisplayType.IPS);
-        computer1.setKeyboard(true,320,KeyboardType.WIRELESS);
+        computer1.setProcessor(new Processor(2500, 4, ProcessorManufacturer.INTEL, 150));
+        computer1.setRam(new Ram(1028, RamType.DDR2, 200));
+        computer1.setHardDrive(new HardDrive(512, 500, HardDriveType.SSD));
+        computer1.setDisplay(new Display(42,1050,DisplayType.IPS));
+        computer1.setKeyboard(new Keyboard(true,320,KeyboardType.WIRELESS));
 
 
         Computer computer2 = new Computer("Lenovo","OldFriend", defaultProcessor, defaulRam,
                 defaultHardDrive, defaultDisplay, defaultKeyboard);
-        computer2.setProcessor(1000,1,ProcessorManufacturer.AMD,150);
-        computer2.setRam(512,RamType.DDR,120);
-        computer2.setHardDrive(256,750,HardDriveType.HDD);
-        computer2.setDisplay(21,1550,DisplayType.VA);
-        computer2.setKeyboard(false,650,KeyboardType.PRACTICE);
+        computer2.setProcessor(new Processor(1000,1,ProcessorManufacturer.AMD,150));
+        computer2.setRam(new Ram(512,RamType.DDR,120));
+        computer2.setHardDrive(new HardDrive(256,750,HardDriveType.HDD));
+        computer2.setDisplay(new Display(21,1550,DisplayType.VA));
+        computer2.setKeyboard(new Keyboard(false,650,KeyboardType.PRACTICE));
 
         System.out.println("Конфигурация копмьютера 1");
         System.out.println(computer1);

@@ -9,7 +9,11 @@ public class Keyboard {
         this.keyboardType = keyboardType;
     }
 
-    public String keyboardToString() {
+    public int getKeyboardWeight() {
+        return keyboardWeight;
+    }
+
+    public String toString() {
         return "Наличие подсветки клавиатуры: " + keyboardLight + '\n' +
                 "Тип клавиатуры: " + keyboardType + '\n' +
                 "Масса клавиатуры: " + keyboardWeight;

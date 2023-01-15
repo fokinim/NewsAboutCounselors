@@ -8,7 +8,12 @@ public class Ram {
         this.ramType = ramType;
         this.ramWeight = ramWeight;
     }
-    public String ramToString() {
+
+    public int getRamWeight() {
+        return ramWeight;
+    }
+
+    public String toString() {
         return "Объем оперативной памяти: " + ramAmount + "\n" +
                 "Тип оперативной памяти: " + ramType + "\n" +
                 "Масса оперативной памяти: " + ramWeight;

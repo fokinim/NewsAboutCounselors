@@ -9,7 +9,11 @@ public class Display {
         this.displayType = displayType;
     }
 
-    public String displayToString() {
+    public int getDisplayWeight() {
+        return displayWeight;
+    }
+
+    public String toString() {
         return "Диагональ экрана: " + displayDiagonal + "\n" +
                 "Тип экрана: " + displayType + "\n" +
                 "Масса экрана: " + displayWeight;
