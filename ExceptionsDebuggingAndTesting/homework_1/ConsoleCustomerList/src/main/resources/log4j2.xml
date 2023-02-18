@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN">
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+
+        <File name="MyFile - info" fileName="logs/queries.log">
+            <Filters>
+                <MarkerFilter marker="QUERIES"/>
+            </Filters>
+            >
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] %c{1} - %msg%n"/>
+        </File>
+
+        <File name="MyFile - errors" fileName="logs/errors.log">
+            <Filters>
+                <MarkerFilter marker="ERROR"/>
+            </Filters>
+            >
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] %c{1} - %msg%n"/>
+        </File>
+    </appenders>
+
+    <loggers>
+        <root level="INFO">
+            <appender-ref ref="MyFile - info" level="info"/>
+            <appender-ref ref="MyFile - errors" level="info"/>
+        </root>
+    </loggers>
+</configuration>
