@@ -15,12 +15,12 @@ public class Main {
 
             int cores = Runtime.getRuntime().availableProcessors();
             int part = files.length / cores;
-            int partCount = files.length / part;
+
             int currentPosition = 0;
 
-            for (int i = 1; i <= partCount; i++) {
+            for (int i = 1; i <= cores; i++) {
 
-                int currentPart = i == partCount ? files.length - part * (i - 1) : part;
+                int currentPart = i == cores ? files.length - part * (i - 1) : part;
 
                 File[] files1 = new File[currentPart];
                 System.arraycopy(files, currentPosition, files1, 0, files1.length);
